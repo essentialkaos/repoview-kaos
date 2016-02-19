@@ -1,0 +1,5 @@
+SOURCES/COPYING
+SOURCES/README.md
+SOURCES/repoview.8
+SOURCES/repoview.py
+SOURCES/templates

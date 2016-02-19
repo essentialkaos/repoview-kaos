@@ -1,0 +1,93 @@
+Version 0.6.6:
+	* Fix for .gz and .xz compressed sqlite databases (rhbz#749028)
+	* Apply Remi Collet's patch to fix encoding (rhbz#636601)
+
+Version 0.6.5:
+	* Apply another patch from Remi Collet to fix rhbz#566789
+
+Version 0.6.4:
+	* Apply patch from Remi Collet for a change of behaviour in sqlite 
+	  (rhbz#498752, F11)
+
+Version 0.6.3:
+	* Fix traceback when there are packages with same name but with different
+	  case (muse vs MuSE rhbz#484525)
+	* Use DISTINCT when listing packages in RPM group pages.
+	* Import md5 as hashlib for compatibility with future pythons.
+	* Fix URLs to point to the fedorahosted.org location.
+	* Fix the way latest packages are generated (fewer dupes).
+
+Version 0.6.2:
+	* Fix traceback when there are non-unique group names (bz#300151, #4)
+	* Use gmtime instead of localtime when generating rss
+	* Expose rpm_sourcerpm in repoview pkg_data dict (#3)
+	* Apply utf-8 patch from kkofler (#2)
+
+Version 0.6.1:
+	* Allow blank changelogs (bug #8)
+	* Fix traceback when group names have case differences (rh #300151)
+	* Add a --comps cmdline option to allow for external comps files
+	* Allow google-indexing of the index page, to make it easier to find
+	  mirrors.
+
+Version 0.6.0:
+	* Big rewrite that breaks all compatibility with previous versions, except
+	  for most command-line switches.
+	* Introduces state-tracking, so small changes to the respository will
+	  result in very fast execution.
+	* Reduces memory footprint.
+	* The above two changes have come at the sacrifice of elegance. Please
+	  excuse me for fairly messy code.
+	* Drop support for yum < 3.0
+	* Require repositories with .sqlite data (createrepo -d)
+
+Version 0.5.2:
+	* Webify more strings (Eric Lassauge)
+	* Use os.* functions for some shutil calls for older python (#551)
+	* Don't ignore --quiet (#589)
+	* Misc small fixes (#588, #590)
+	* Drop specfile from the tarball
+
+Version 0.5.1:
+	* Hack around the comps.xml API changes in yum-2.5.x
+
+Version 0.5:
+	* Switch to optparse. This may break older Pythons, not sure.
+	* Dropped "-t toplevel" switch, since it complicated the code
+	  a lot and not used by anyone, to my knowledge.
+	* Moved "-l title" to "-t title" with a deprecation note in place.
+	* Added RSS generation routines. Template for the entries is in
+	  kid.rss. Feed published into repodata/latest-feed.xml. To enable
+	  rss feed generation, pass a "-u URL" flag (repoview has no other way
+	  of knowing where your data will be published).
+
+Version 0.4.1
+	* Add -V, --version, -h, and -? command-line options 
+	  (#504, patch by Ville Skyttä)
+	* Fix Changelog sorting (introduced in 0.4 with parser logic change)
+
+Version 0.4
+	* Add DOCTYPE declarations (#482)
+	* Use YUM parsing routines with "noyum" fallback for people with no yum
+	  or yum <= 2.3 (see README)
+	* Fix the "latest packages" selection behaviour (#485, rh#168125)
+	* Remove the (fairly useless) "Total Groups" summary
+	* CSS Fixes from Ville Skyttä (#483, #484)
+	* Add timestamps to the index page "Latest Packages" listing (#501)
+	* Preserve unchanged files for more efficient mirroring (#492)
+
+Version 0.3
+	* Fall back to silly RPM groups if no group data is found.
+	* Replace all slashes and spaces in group names to avoid breakage.
+	* Add a -l switch to provide a brief title, e.g.:
+	  -l "Fedora Extras 3 x86"
+
+Version 0.2
+    * Use iterparse to save a whole lotta memory
+    * Work with kid-0.6
+    * Do not use enumerate() as that breaks on python-2.2
+    * Rename repoview into repoview.py
+    * Rename __orphans__ to __nogroup__
+    * Add a simple manpage
+    * Check for repomd.xml before trying to parse it
+

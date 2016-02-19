@@ -1,0 +1,105 @@
+.TH "repoview-kaos" "8" "0.6.6" "Konstantin Ryabitsev" "Applications/Utilities"
+
+.SH NAME
+\fBrepoview\fR \- Make YUM repositories browseable
+
+.SH SYNOPSIS
+\fBrepoview\fR [options] repodir
+
+.SH DESCRIPTION
+RepoView allows one to easily create a set of static HTML pages in a 
+YUM repository, allowing simple browsing of available packages. It uses 
+kid templating engine to create the pages and is therefore easily 
+customizeable.
+
+.SH OPTIONS
+.TP
+.B \-i, \-\-ignore\-package NAME
+Optionally ignore this package \-\- can be a shell-style glob.
+This is useful for excluding debuginfo packages:
+.br
+\-i *debuginfo* \-i *doc*
+.br
+The globbing will be done against name-epoch-version-release, e.g. 
+foo-0-1.0-1
+.TP
+.B \-x, \-\-exclude\-arch ARCH
+Optionally exclude this arch. E.g.:
+.br
+\-x src \-x ia64
+.TP
+.B \-k, \-\-template\-dir DIR
+Use an alternative directory with kid templates instead of the 
+default: ./templates. The template directory must contain four 
+required template files: index.kid, group.kid, package.kid, rss.kid and 
+the "layout" dir which will be copied into the repoview directory.
+.TP
+.B \-o, \-\-output\-dir DIR
+Create the repoview pages in this subdirectory inside
+the repository (default: "repoview")
+.TP
+.B \-s, \-\-state\-dir DIR
+Create the state-tracking db in this directory
+(default: store in output directory)
+.TP
+.B \-t, \-\-title TITLE
+Describe the repository in a few words. By default "RepoView" is used. 
+E.g.:
+.br
+\-t "Extras for Fedora Core 3 x86"
+.TP
+.B \-u, \-\-url URL
+Repository URL to use when generating the RSS feed. E.g.: 
+.br
+\-u "http://fedoraproject.org/extras/5/i386"
+.br
+Not providing a url will disable RSS feed generation.
+.TP
+.B \-f, \-\-force
+Regenerate the pages even if the repomd checksum has not changed.
+.TP
+.B \-q, \-\-quiet
+Do not output anything except fatal errors.
+.TP
+.B \-c, \-\-comps
+Use an alternative comps.xml file, instead of the one specified in repomd.
+.TP
+.B \-V, \-\-version
+Print version number and exit.
+.TP
+.B \-h, \-\-help
+Print usage message and exit.
+.TP
+.B repodir
+Where to look for the "repodata" directory.
+
+.SH "FILES"
+.LP 
+.I /usr/bin/repoview
+.br
+.I /usr/share/repoview/templates/*
+
+.SH "EXAMPLES"
+.LP
+The simplest invocation is:
+.LP 
+.B repoview /path/to/repository
+.br
+.B repoview -t 'Fedora Extras 4 ix86' /path/to/repository
+.LP 
+When running from cron, you want to use the \-q switch:
+.LP 
+.B repoview -q /path/to/repository
+.br
+.LP
+This will generate an RSS feed:
+.LP
+.B repoview -u http://example.com/repo/i386 /path/to/repository
+
+.SH "AUTHORS"
+.LP 
+Konstantin Ryabitsev <icon@fedoraproject.org>
+
+.SH "SEE ALSO"
+.LP 
+http://createrepo.baseurl.org/
