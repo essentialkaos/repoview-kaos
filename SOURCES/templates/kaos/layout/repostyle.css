@@ -2,48 +2,46 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
 
 body {
-  font-family:"Open Sans", "Segoe UI", Osaka, "Helvetica Neue", Verdana, sans-serif;
+  font-family: "Open Sans", "Segoe UI", Osaka, "Helvetica Neue", Verdana, sans-serif;
   font-size: 14px;
 }
 
 .nav {
+  color: #888;
+  font-size: 12px;
   text-align: right;
-  color: gray;
-  font-size: small;
 }
 
 .nlink {
+  color: #777;
   text-decoration: none; 
-  color: #777; 
-  font-size: small; 
 }
 
 .nlink:hover {
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   color: #555;
-  font-size: small; 
 }
 
 .inpage {
-  text-decoration: none;
-  color: #333;
   border-bottom: 1px solid #e2e2e2;
+  color: #222;
+  text-decoration: none;
 }
 
 .inpage:hover {
   background-color: #f5f5f5;
+  border-bottom: 1px solid #aaa;
   color: #555;
-  border-bottom: 1px solid #AAA;
 }
 
 .levbar {
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd; 
+  height: 100%; 
+  left: 0px;
   position: fixed; 
   top: 0px; 
-  left: 0px;
   width: 13em; 
-  height: 100%; 
-  border-right: 1px solid #ddd; 
-  background-color: #f5f5f5;
 }
 
 .main {
@@ -52,37 +50,37 @@ body {
   width: 75%;
 }
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
   border-bottom: 1px dotted #ddd; 
-  font-weight: 100;
-  padding: 4px;
   color: #777;
   font-size: 28px;
+  font-weight: lighter;
+  padding: 8px 0 8px 0;
 }
 
 .pagetitle {
-  border-top: 1px solid #ddd; 
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-top: 5%;
+  border-top: 1px solid #ddd; 
+  color: #666; 
+  font-weight: lighter;
   margin-bottom: 5%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
   text-align: center;
   width: 100%;
-  color: gray; 
-  background-color: white;
   word-wrap: break-word;
-  font-weight: 100;
 }
 
 dt  {
-  font-weight: 600;
   color: #888;
+  font-weight: bold;
 }
 
 th  {
-  font-weight: 600;
   color: #888;
+  font-weight: bold;
   text-align: left;
 }
 
@@ -90,17 +88,18 @@ th  {
   background-color: whitesmoke;
   text-align: right;
 }
+
 .levbarlist {
+  background-color: #efefef;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   list-style-type: none;
   padding: 5%;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #efefef;
 }
 
 .pkglist {
-  list-style-type: none;
   color: #999;
+  list-style-type: none;
 }
 
 .letterlist a {
@@ -109,62 +108,58 @@ th  {
 }
 
 .footernote {
-  text-align: right;
-  font-size: small;
   border-top: 1px dotted #e0e0e0;
+  font-size: 12px;
   color: #aaa;
-  padding: 2px;
+  padding: 8px 0 48px 0;
+  text-align: right;
 }
+
 .repoview {
-  text-decoration: none;
   color: #888;
-  font-size: small; 
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .repoview:hover {
-  background-color: #f0f0f0; 
-  color: #333;
-  font-size: small;
+  color: #222;
+  font-weight: bold;
 }
 
 ul span {
   font-style: normal;
-  font-weight: 100;
 }
 
 li {
-  font-style: normal;
-  font-weight: 100;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 pre {
-  font-family: Monaco, Consolas, "Courier New", monospace;
   color: #555;
-  font-size: 15px;
+  font-family: Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
 }
 
 .changelog {
-  font-size: 13px;
+  font-size: 12px;
+}
+
+td {
+  color: #222;
 }
 
 td a {
-  text-decoration: none;
-  color: #333;
   border-bottom: 1px solid #e2e2e2;
+  color: #222;
+  text-decoration: none;
 }
 
 td a:hover {
   background-color: #f5f5f5;
+  border-bottom: 1px solid #aaa;
   color: #555;
-  border-bottom: 1px solid #AAA;
 }
 
 td span {
-  color: #666;
-}
-
-td strong {
-  font-weight: 600;
   color: #666;
 }

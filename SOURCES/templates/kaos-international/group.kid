@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html xmlns:py="http://purl.org/kid/ns#">
 <head>
-  <title py:content="'RepoView: %s' % repo_data['title']"/>
+  <title py:content="'RepoView KAOS: %s' % repo_data['title']"/>
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="layout/repostyle.css" type="text/css" />
   <meta name="robots" content="noindex,follow" />
 </head>
@@ -34,7 +35,7 @@
         </ul>
         <p class="footernote">
           Listing created by
-          <a href="http://essentialkaos.com/"
+          <a href="https://github.com/essentialkaos/repoview-kaos"
             class="repoview" py:content="'repoview-kaos-%s' % repo_data['my_version']"/>
         </p>
     </div>
