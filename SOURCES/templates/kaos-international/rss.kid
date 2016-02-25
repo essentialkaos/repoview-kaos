@@ -2,8 +2,7 @@
 <?python
 import time
 def ymd(stamp):
-    return time.strftime('%Y-%m-%d', time.localtime(int(stamp)))
-    
+    return time.strftime('%d/%m/%Y', time.localtime(int(stamp)))
 ?>
 <div xmlns:py="http://purl.org/kid/ns#">
 	<p>

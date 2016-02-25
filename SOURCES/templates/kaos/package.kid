@@ -6,7 +6,7 @@ def ymd(stamp):
 ?>
 <html xmlns:py="http://purl.org/kid/ns#">
 <head>
-  <title py:content="'RepoView: %s' % repo_data['title']"/>
+  <title py:content="'RepoView KAOS: %s' % repo_data['title']"/>
   <link rel="stylesheet" href="layout/repostyle.css" type="text/css"/>
   <meta name="robots" content="noindex,follow" />
 </head>
@@ -53,7 +53,7 @@ def ymd(stamp):
         </dl>
 
         <h3>Packages</h3>
-        <table border="0" cellpadding="0" cellspacing="10">
+        <table border="0" cellspacing="0" cellpadding="10">
         <tr py:for="(e, v, r, a, built, size, loc, author, log, added) in pkg_data['rpms']">
             <td valign="top"><a href="${'../%s' % loc}" class="inpage" 
               py:content="'%s-%s-%s.%s' % (pkg_data['name'], v, r, a)"/>
@@ -70,7 +70,7 @@ def ymd(stamp):
         </table>
         <p class="footernote">
           Listing created by
-          <a href="http://essentialkaos.com/"
+          <a href="https://github.com/essentialkaos/repoview-kaos"
             class="repoview" py:content="'repoview-kaos-%s' % repo_data['my_version']"/>
         </p>
     </div>
