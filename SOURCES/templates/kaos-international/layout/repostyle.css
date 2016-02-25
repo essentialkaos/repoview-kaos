@@ -85,7 +85,7 @@ th  {
 }
 
 .field  {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   text-align: right;
 }
 
@@ -109,8 +109,8 @@ th  {
 
 .footernote {
   border-top: 1px dotted #e0e0e0;
-  font-size: 12px;
   color: #aaa;
+  font-size: 12px;
   padding: 8px 0 48px 0;
   text-align: right;
 }
@@ -131,7 +131,7 @@ ul span {
 }
 
 li {
-  padding-bottom: 8px;
+  padding: 4px 0 4px 0;
 }
 
 pre {

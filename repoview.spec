@@ -20,11 +20,11 @@
 Summary:            Creates a set of static HTML pages in a yum repository
 Name:               repoview-kaos
 Version:            0.6.6
-Release:            7%{?dist}
+Release:            8%{?dist}
 License:            GPLv2+
 Group:              Applications/System
 URL:                http://essentialkaos.com
-Vendor:             ESSENTIAL KAOS
+Vendor:             ESSENTIALKAOS
 
 Source0:            %{name}-%{version}.tar.bz2
 
@@ -88,6 +88,9 @@ rm -rf %{buildroot}
 ########################################################################################
 
 %changelog
+* Thu Feb 25 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-8
+- Fixed some bugs in CSS
+
 * Thu Feb 25 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-7
 - Improved CSS and templates
 

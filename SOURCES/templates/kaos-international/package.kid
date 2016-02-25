@@ -57,7 +57,7 @@ def ymd(stamp):
         <tr py:for="(e, v, r, a, built, size, loc, author, log, added) in pkg_data['rpms']">
             <td valign="top"><a href="${'../%s' % loc}" class="inpage" 
               py:content="'%s-%s-%s.%s' % (pkg_data['name'], v, r, a)"/>
-              <span style="white-space: nowrap" py:content="'[%s]' % size"/></td>
+              <span style="white-space: nowrap" py:content="'(%s)' % size"/></td>
             <td valign="top" py:if="log">
               Changelog
               by <strong py:content="author"/> <span py:content="'(%s)' % ymd(added)"/>:
