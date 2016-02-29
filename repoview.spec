@@ -15,18 +15,20 @@
 %define _loc_datadir      %{_loc_datarootdir}
 %define _loc_includedir   %{_loc_prefix}/include
 
+%define raw_release       8
+
 ########################################################################################
 
 Summary:            Creates a set of static HTML pages in a yum repository
 Name:               repoview-kaos
 Version:            0.6.6
-Release:            8%{?dist}
+Release:            %{raw_release}%{?dist}
 License:            GPLv2+
 Group:              Applications/System
 URL:                http://essentialkaos.com
 Vendor:             ESSENTIALKAOS
 
-Source0:            %{name}-%{version}.tar.bz2
+Source0:            https://source.kaos.io/%{name}/%{name}-%{version}.%{raw_release}.tar.bz2
 
 BuildArch:          noarch
 BuildRoot:          %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -44,7 +46,7 @@ browsing.
 ########################################################################################
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}.%{raw_release}
 %build
 
 %install
