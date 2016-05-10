@@ -88,7 +88,7 @@ def _mkid(text):
 
 def _humansize(bytes):
     """
-    This will return the size in sane units (KiB or MiB).
+    This will return the size in sane units (KB or MB).
     
     @param bytes: number of bytes
     @type  bytes: int
@@ -97,13 +97,13 @@ def _humansize(bytes):
     @rtype:  str
     """
     if bytes < 1024:
-        return '%d Bytes' % bytes
+        return '%d B' % bytes
     bytes = int(bytes)
     kbytes = bytes/1024
     if kbytes/1024 < 1:
-        return '%d KiB' % kbytes
+        return '%d KB' % kbytes
     else:
-        return '%0.1f MiB' % (float(kbytes)/1024)
+        return '%0.1f MB' % (float(kbytes)/1024)
 
 def _compare_evra(one, two):
     """

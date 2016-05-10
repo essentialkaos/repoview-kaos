@@ -15,7 +15,7 @@
 %define _loc_datadir      %{_loc_datarootdir}
 %define _loc_includedir   %{_loc_prefix}/include
 
-%define raw_release       8
+%define raw_release       10
 
 ########################################################################################
 
@@ -90,6 +90,12 @@ rm -rf %{buildroot}
 ########################################################################################
 
 %changelog
+* Mon May 09 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-10
+- Minor improvements
+
+* Thu May 05 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-9
+- Minor improvements
+
 * Thu Feb 25 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-8
 - Fixed some bugs in CSS
 
