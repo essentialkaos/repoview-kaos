@@ -51,11 +51,11 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  border-bottom: 1px dotted #ddd; 
+  border-bottom: 1px dotted #e5e5e5; 
   color: #777;
-  font-size: 28px;
   font-weight: lighter;
   padding: 8px 0 8px 0;
+  margin-top: 32px;
 }
 
 .pagetitle {
@@ -108,10 +108,11 @@ th  {
 }
 
 .footernote {
-  border-top: 1px dotted #e0e0e0;
+  border-top: 1px dashed #e5e5e5;
   color: #aaa;
   font-size: 12px;
   padding: 8px 0 48px 0;
+  margin-top: 64px;
   text-align: right;
 }
 
@@ -137,7 +138,6 @@ li {
 pre {
   color: #555;
   font-family: Monaco, Consolas, "Courier New", monospace;
-  font-size: 14px;
 }
 
 .changelog {
@@ -170,3 +170,4 @@ td span {
   vertical-align: text-top;
   white-space: nowrap;
 }
+
