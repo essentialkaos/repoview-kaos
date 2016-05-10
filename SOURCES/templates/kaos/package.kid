@@ -12,8 +12,8 @@ def ymd(stamp):
 </head>
 <body>
     <div class="levbar">
-      <p class="pagetitle" py:content="group_data['name']"/>
-      <ul class="levbarlist">
+      <p class="page-title" py:content="group_data['name']"/>
+      <ul class="levbar-list">
         <li>
         <a href="${group_data['filename']}" 
             title="Back to package listing"
@@ -24,14 +24,15 @@ def ymd(stamp):
     </div>
     <div class="main">
         <p class="nav">Jump to letter: [
-          <span class="letterlist">
+          <span class="letter-list">
             <a py:for="letter in repo_data['letters']"
               class="nlink"
               href="${'letter_%s.group.html' % letter.lower()}" py:content="letter"/>
           </span>]
         </p>
-        <h2 py:content="'%s - %s' % (pkg_data['name'], pkg_data['summary'])"/>
-        
+
+        <h2><span class="pkg-name" py:content="'%s' % pkg_data['name']"></span> - <span class="pkg-summary" py:content="'%s' % pkg_data['summary']"></span></h2>
+
         <table border="0" cellspacing="0" cellpadding="2">
           <tr py:if="pkg_data['url']">
             <th>Website:</th>
@@ -57,10 +58,9 @@ def ymd(stamp):
         <tr py:for="(e, v, r, a, built, size, loc, author, log, added) in pkg_data['rpms']">
             <td valign="top"><a href="${'../%s' % loc}" class="inpage" 
               py:content="'%s-%s-%s.%s' % (pkg_data['name'], v, r, a)"/>
-              <span class="pkgsize" py:content="'%s' % size"/></td>
+              <span class="pkg-size" py:content="'%s' % size"/></td>
             <td valign="top" py:if="log">
-              Changelog
-              by <strong py:content="author"/> <span py:content="'(%s)' % ymd(added)"/>:
+              Changelog by <span py:content="author"/> <span class="changelog-date" py:content="'(%s)' % ymd(added)"/>
               <pre class="changelog" py:content="log"/>
             </td>
             <td valign="top" py:if="not log">
@@ -68,7 +68,7 @@ def ymd(stamp):
             </td>
         </tr>
         </table>
-        <p class="footernote">
+        <p class="footer-note">
           Listing created by
           <a href="https://github.com/essentialkaos/repoview-kaos"
             class="repoview" py:content="'repoview-kaos-%s' % repo_data['my_version']"/>
