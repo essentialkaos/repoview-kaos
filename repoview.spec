@@ -15,7 +15,7 @@
 %define _loc_datadir      %{_loc_datarootdir}
 %define _loc_includedir   %{_loc_prefix}/include
 
-%define raw_release       10
+%define raw_release       11
 
 ########################################################################################
 
@@ -90,6 +90,11 @@ rm -rf %{buildroot}
 ########################################################################################
 
 %changelog
+* Tue May 10 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-11
+- Improved CSS
+- Improved templates
+- Added hi-res logo
+
 * Mon May 09 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-10
 - Minor improvements
 
@@ -104,7 +109,7 @@ rm -rf %{buildroot}
 
 * Fri Feb 19 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-6
 - Using Google Fonts for serving Open Sans font
-- Removed minified css
+- Removed minified CSS
 
 * Tue Jan 15 2013 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-5
 - Updated templates to more light UI

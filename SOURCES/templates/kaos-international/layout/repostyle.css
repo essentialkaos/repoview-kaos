@@ -58,7 +58,11 @@ h1, h2, h3, h4, h5 {
   margin-top: 32px;
 }
 
-.pagetitle {
+.pkg-name {
+  font-weight: normal;
+}
+
+.page-title {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd; 
@@ -89,7 +93,7 @@ th  {
   text-align: right;
 }
 
-.levbarlist {
+.levbar-list {
   background-color: #efefef;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
@@ -97,17 +101,17 @@ th  {
   padding: 5%;
 }
 
-.pkglist {
+.pkg-list {
   color: #999;
   list-style-type: none;
 }
 
-.letterlist a {
+.letter-list a {
   padding-left: 0.2em;
   padding-right: 0.2em;
 }
 
-.footernote {
+.footer-note {
   border-top: 1px dashed #e5e5e5;
   color: #aaa;
   font-size: 12px;
@@ -144,6 +148,10 @@ pre {
   font-size: 12px;
 }
 
+.changelog-date {
+  color: #888;
+}
+
 td {
   color: #222;
 }
@@ -160,14 +168,10 @@ td a:hover {
   color: #555;
 }
 
-td span {
-  color: #666;
-}
-
-.pkgsize {
+.pkg-size {
+  color: #888;
   font-size: 10px;
   font-weight: bold;
   vertical-align: text-top;
   white-space: nowrap;
 }
-
