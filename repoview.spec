@@ -15,7 +15,7 @@
 %define _loc_datadir      %{_loc_datarootdir}
 %define _loc_includedir   %{_loc_prefix}/include
 
-%define raw_release       11
+%define raw_release       12
 
 ########################################################################################
 
@@ -90,6 +90,9 @@ rm -rf %{buildroot}
 ########################################################################################
 
 %changelog
+* Fri Jun 17 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-12
+- Improved package template
+
 * Tue May 10 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-11
 - Improved CSS
 - Improved templates

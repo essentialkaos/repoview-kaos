@@ -53,7 +53,7 @@ def ymd(stamp):
         <dd><pre py:content="pkg_data['description']"/></dd>
         </dl>
 
-        <h3>Packages</h3>
+        <h2>Packages</h2>
         <table border="0" cellspacing="0" cellpadding="10">
         <tr py:for="(e, v, r, a, built, size, loc, author, log, added) in pkg_data['rpms']">
             <td valign="top"><a href="${'../%s' % loc}" class="inpage" 
