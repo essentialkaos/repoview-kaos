@@ -11,6 +11,9 @@ def ymd(stamp):
   <link py:if="url is not None"
     rel="alternate" type="application/rss+xml" title="RSS" href="latest-feed.xml" />
   <meta name="robots" content="index,follow" />
+  <meta property="og:site_name" content="${repo_data['title']}" />
+  <meta property="og:title" content="Repository index" />
+  <meta property="og:description" content="Package index of ${repo_data['title']}" />
 </head>
 <body>
     <div class="levbar">
