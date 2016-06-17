@@ -5,6 +5,9 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" href="layout/repostyle.css" type="text/css" />
   <meta name="robots" content="noindex,follow" />
+  <meta property="og:site_name" content="${repo_data['title']}" />
+  <meta property="og:title" content="${group_data['name']}" />
+  <meta property="og:description" content="Packages in group ${group_data['name']}" />
 </head>
 <body>
     <div class="levbar">

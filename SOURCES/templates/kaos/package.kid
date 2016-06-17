@@ -9,6 +9,9 @@ def ymd(stamp):
   <title py:content="'RepoView KAOS: %s' % repo_data['title']"/>
   <link rel="stylesheet" href="layout/repostyle.css" type="text/css"/>
   <meta name="robots" content="noindex,follow" />
+  <meta property="og:site_name" content="${repo_data['title']}" />
+  <meta property="og:title" content="${pkg_data['name']}" />
+  <meta property="og:description" content="${pkg_data['summary']}" />
 </head>
 <body>
     <div class="levbar">

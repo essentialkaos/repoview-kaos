@@ -15,7 +15,7 @@
 %define _loc_datadir      %{_loc_datarootdir}
 %define _loc_includedir   %{_loc_prefix}/include
 
-%define raw_release       12
+%define raw_release       13
 
 ########################################################################################
 
@@ -82,7 +82,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, -)
-%doc README.md COPYING
+%doc COPYING
 %{_datadir}/%{name}
 %{_bindir}/*
 %{_mandir}/man*/*
@@ -90,6 +90,9 @@ rm -rf %{buildroot}
 ########################################################################################
 
 %changelog
+* Fri Jun 17 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-13
+- Open Graph support
+
 * Fri Jun 17 2016 Anton Novojilov <andy@essentialkaos.com> - 0.6.6-12
 - Improved package template
 
