@@ -25,10 +25,9 @@ Version:            0.6.6
 Release:            %{raw_release}%{?dist}
 License:            GPLv2+
 Group:              Applications/System
-URL:                http://essentialkaos.com
-Vendor:             ESSENTIALKAOS
+URL:                https://github.com/essentialkaos/repoview-kaos
 
-Source0:            https://source.kaos.io/%{name}/%{name}-%{version}.%{raw_release}.tar.bz2
+Source0:            https://source.kaos.st/%{name}/%{name}-%{version}.%{raw_release}.tar.bz2
 
 BuildArch:          noarch
 BuildRoot:          %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
